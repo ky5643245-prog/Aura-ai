@@ -1,8 +1,0 @@
-{
-  "rewrites": [
-    {
-      "source": "/api/:path*",
-      "destination": "https://aura-ai-fe42.onrender.com/api/:path*"
-    }
-  ]
-}
