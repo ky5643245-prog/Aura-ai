@@ -537,13 +537,15 @@ export default function App() {
 
         const uploadResponse =
           await fetch(
-            "/api/files",
-            {
-              method: "POST",
-              credentials: "include",
-              body: form,
-            }
-          );
+  `${(
+    import.meta.env.VITE_API_URL || ""
+  ).replace(/\/$/, "")}/api/files`,
+  {
+    method: "POST",
+    credentials: "include",
+    body: form,
+  }
+);
 
         const contentType =
           uploadResponse.headers.get(
